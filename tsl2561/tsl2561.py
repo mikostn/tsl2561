@@ -14,7 +14,8 @@ https://github.com/adafruit/Adafruit_TSL2561
 
 from __future__ import absolute_import
 import time
-from Adafruit_I2C import Adafruit_I2C
+import Adafruit_GPIO.I2C as I2C
+Adafruit_I2C = I2C.Device
 from .constants import *  # pylint: disable=unused-wildcard-import
 
 __author__ = 'Georges Toth <georges@trypill.org>'
@@ -31,7 +32,7 @@ v1.0 - First release (previously TSL2561)
 
 class TSL2561(object):
     '''Driver for the TSL2561 digital luminosity (light) sensors.'''
-    def __init__(self, address=None,
+    def __init__(self, address=None, bus=1,
                  integration_time=TSL2561_DELAY_INTTIME_402MS,
                  gain=TSL2561_GAIN_1X, autogain=False, debug=False):
         if address is not None:
@@ -39,7 +40,7 @@ class TSL2561(object):
         else:
             self.address = TSL2561_ADDR_FLOAT
 
-        self.i2c = Adafruit_I2C(self.address)
+        self.i2c = Adafruit_I2C(self.address, bus)
 
         self.debug = debug
         self.integration_time = integration_time
