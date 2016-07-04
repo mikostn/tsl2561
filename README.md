@@ -1,4 +1,4 @@
-[![Code Health](https://landscape.io/github/sim0nx/tsl2561/master/landscape.svg?style=flat)](https://landscape.io/github/sim0nx/tsl2561/master)
+[![Code Health](https://landscape.io/github/sim0nx/tsl2561/master/landscape.svg?style=flat)](https://landscape.io/github/sim0nx/tsl2561/master) [![PyPI version](https://badge.fury.io/py/tsl2561.svg)](https://badge.fury.io/py/tsl2561)
 
 
 Python library for TSL2561
@@ -8,9 +8,8 @@ Python library for TSL2561
 Requirements
 ------------
   - python 2.7.x
-  - ~~Adafruit I2C library (https://github.com/adafruit/Adafruit-Raspberry-Pi-Python-Code/tree/master/Adafruit_I2C)~~
-  - Adafruit Python GPIO Library I2C module (https://github.com/adafruit/Adafruit-Raspberry-Pi-Python-Code/)
-  - python smbus
+  - Adafruit GPIO library (https://github.com/adafruit/Adafruit_Python_GPIO)
+  - Adafruit PureIO library (https://github.com/adafruit/Adafruit_Python_PureIO)
 
 Example
 ------------
@@ -28,7 +27,7 @@ License
 Copyright (c) 2015 Kevin Townsend for Adafruit Industries.
 All rights reserved.
 
-Copyright (c) 2015, Georges Toth
+Copyright (c) 2016, Georges Toth
 All rights reserved.
 
 
